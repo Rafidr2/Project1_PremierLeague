@@ -3,6 +3,8 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
   }
   
   .team-card {
@@ -12,6 +14,7 @@
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
   }
   
   .team-logo {
@@ -23,7 +26,7 @@
   button {
     padding: 10px 15px;
     background-color: #007bff;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -42,13 +45,42 @@
 
   body {
     background-image: url('https://assets.turbologo.com/blog/en/2020/01/19084653/Premier-League-symbol-958x575.png'); /* replace with the actual path */
-    background-size: cover; /* Ensure it covers the entire screen */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
-  
-  .team-grid {
-    background-color: rgba(255, 255, 255, 0.8); /* Make the card area slightly opaque so it's more readable */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit with a minimum size */
+    gap: 20px;
     padding: 20px;
-    border-radius: 10px;
+    justify-content: center;
+    margin: 0 auto;  /* Center the container horizontally */
+    max-width: 1200px; /* Set a max width for larger screens */
   }
+
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .card {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .card {
+      padding: 10px;
+    }
+  }
+  
+  
