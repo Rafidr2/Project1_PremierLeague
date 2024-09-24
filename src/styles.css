@@ -34,6 +34,21 @@
   }  
 
   h1 {
+    color: #fff8f8;
     text-align: center;
-    margin-top: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;  
+  }
+
+  body {
+    background-image: url('https://assets.turbologo.com/blog/en/2020/01/19084653/Premier-League-symbol-958x575.png'); /* replace with the actual path */
+    background-size: cover; /* Ensure it covers the entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .team-grid {
+    background-color: rgba(255, 255, 255, 0.8); /* Make the card area slightly opaque so it's more readable */
+    padding: 20px;
+    border-radius: 10px;
   }
